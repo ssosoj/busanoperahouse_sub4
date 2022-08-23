@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=1400">
+
+  <link rel="stylesheet" href="index.css">
+
+  <script src="script/jquery-3.5.1.min.js"></script>
+  <script src="script/menu_top_fixed.js"></script>
+  <script src="script/calendar.js"></script>
+  <script src="script/search.js"></script>
+
+  <title>아카데미</title>
+</head>
+
+<body>
+<!-- 메뉴 -->
+  <div id="gnb">
+    <div class="gnb_inner">
+      <ul class="left gnb1">
+        <li><a href="#">공연안내</a></li>
+        <li><a href="#">티켓예매</a></li>
+        <li><a href="#">아카데미</a></li>
+        <li><a href="#">고객센터</a></li>
+      </ul>
+
+      <ul class="right gnb2">
+        <li><a href="#">기관소개</a></li>
+        <li><a href="#">알림마당</a></li>
+
+        <li><a href="#" id="small">MD샵</a></li>
+        <li><a href="#" id="small">로그인</a></li>
+
+        <li><a href="#"><img src="images/sub_calendar.png" alt="달력"></a></li>
+        <li>
+          <div class="search-wrapper">
+            <div class="input-holder">
+                <input type="text" class="search-input" placeholder="검색" />
+                 <button class="search-icon" onclick="searchToggle(this, event);">
+                  <span><img src="images/sub_search.png" alt=""></span>
+                </button>
+            </div>
+            <span class="close" onclick="searchToggle(this, event);"></span>
+          </div>
+        </li>
+
+      </ul>
+
+      <a href="#"><img src="images/sub_logo.png" alt="로고" id="sub_logo"></a>
+
+    </div>
+  </div>
+
+  <!-- 상단고정 메뉴 -->
+  <div class="gnb_top">
+    <div class="gnb_top_inner">
+      <ul class="left gnb1_top">
+        <li><a href="#">공연안내</a></li>
+        <li><a href="#">티켓예매</a></li>
+        <li><a href="#">아카데미</a></li>
+        <li><a href="#">고객센터</a></li>
+      </ul>
+
+      <ul class="right gnb2_top">
+        <li><a href="#">기관소개</a></li>
+        <li><a href="#">알림마당</a></li>
+
+        <li><a href="#" id="small_top">MD샵</a></li>
+        <li><a href="#" id="small_top">로그인</a></li>
+
+        <li><a href="#"><img src="images/sub_calendar_w.png" alt="달력"></a></li>
+        <li>
+          <div class="search-wrapper_top">
+            <div class="input-holder_top">
+                <input type="text" class="search-input_top" placeholder="검색" />
+                 <button class="search-icon_top" onclick="searchToggle_top(this, event);">
+                  <span><img src="images/sub_search_w.png" alt=""></span>
+                </button>
+            </div>
+            <span class="close_top" onclick="searchToggle_top(this, event);"></span>
+          </div>
+        </li>
+      </ul>
+
+      <a href="#"><img src="images/fix_logo.png" alt="로고" id="logo_top"></a>
+    </div>
+  </div>
+
+<!-- 배너 -->
+  <div id="banner">
+    <h1>아카데미</h1>
+  </div>
+
+
+<!-- 작은메뉴 -->
+  <div id="nav">
+    <div class="nav_inner">
+      <ul>
+        <li><a href="#"><img src="images/sub_home.png" alt="홈"></a></li>
+        <li>
+          <h2>아카데미</h2>
+          <img src="images/sub_right.png" alt="화살표" class="right">
+        </li>
+        <li>
+          <h2>아카데미</h2>
+          <img src="images/sub_right.png" alt="화살표" class="right">
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+  <!-- 내용 -->
+  <div id="box">
+    <div class="box1 left">
+      <img src="images/three_poster.jpg" alt="강의실">
+
+      <div id="p_number">
+        <img src="images/three_left_arrow.png" alt="왼쪽화살표">
+        <h6> 01 - 01 </h6>
+        <img src="images/three_right_arrow.png" alt="오른쪽화살표">
+      </div>
+
+      <h1>051-000-0000</h1>
+
+      <p>
+        문의전화 051-000-0000 <br>
+        상담시간 09:00-18:00 / 토요일, 일요일, 공휴일 휴무
+      </p>
+
+      <ul>
+        <li>
+          <a href="#">
+            <img src="images/three_class.png" alt="프로그램안내">
+            <p>프로그램안내</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="images/three_subscription.png" alt="수강신청">
+            <p>수강신청</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="images/three_check.png" alt="신청확인">
+            <p>수강신청 확인</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="box2 right">
+      <div id="box2_1">
+        <h1>2022.12</h1>
+        <h2>교육일정</h2>
+        <img src="images/three_left_arrow_mini.png" alt="화살표" id="arrow_m">
+        <img src="images/three_right_arrow_mini.png" alt="화살표">
+
+        <hr>
+
+        <ul id="calendar">
+          <li>
+              <a href="#none" class="orange top">일</a>
+          </li>
+          <li>
+              <a href="#none" class="top">월</a>
+          </li>
+          <li>
+              <a href="#none" class="top">화</a>
+          </li>
+          <li>
+              <a href="#none" class="top">수</a>
+          </li>
+          <li>
+              <a href="#none" class="top">목</a>
+          </li>
+          <li>
+              <a href="#none" class="top">금</a>
+          </li>
+          <li>
+              <a href="#none" class="top orange">토</a>
+          </li>
+
+<!--1주-->
+          <li>
+              <a href="#none" class="opacity orange"> 1</a>
+          </li>
+          <li >
+              <a href="#none" class="opacity"> 2</a>
+          </li>
+          <li>
+              <a href="#none" class="opacity">3 </a>
+          </li>
+          <li>
+              <a href="#none" class="opacity">4</a>
+          </li>
+          <li  class="on">
+              <a href="#none">1</a>
+          </li>
+          <li>
+              <a href="#none">2</a>
+          </li>
+          <li>
+              <a href="#none" class="orange">3</a>
+          </li>
+
+<!--2주-->
+          <li>
+              <a href="#none" class="orange">4</a>
+          </li>
+          <li>
+              <a href="#none">5</a>
+          </li>
+          <li>
+              <a href="#none">6</a>
+          </li>
+          <li>
+              <a href="#none">7</a>
+          </li>
+          <li>
+              <a href="#none">8</a>
+          </li>
+          <li>
+              <a href="#none">9</a>
+          </li>
+          <li>
+              <a href="#none" class="orange">10</a>
+          </li>
+
+          <!--3주-->
+          <li>
+              <a href="#none" class="orange">11</a>
+          </li>
+          <li>
+              <a href="#none">12</a>
+          </li>
+          <li>
+              <a href="#none">13</a>
+          </li>
+          <li>
+              <a href="#none">14</a>
+          </li>
+          <li>
+              <a href="#none">15</a>
+          </li>
+          <li>
+              <a href="#none">16</a>
+          </li>
+          <li>
+              <a href="#none" class="orange">17</a>
+          </li>
+
+          <!--4주-->
+          <li>
+              <a href="#none" class="orange"> 18</a>
+          </li>
+          <li>
+              <a href="#none"> 19</a>
+          </li>
+          <li>
+              <a href="#none">20</a>
+          </li>
+          <li>
+              <a href="#none">21</a>
+          </li>
+          <li>
+              <a href="#none">22</a>
+          </li>
+          <li>
+              <a href="#none">23</a>
+          </li>
+          <li>
+              <a href="#none" class="orange">24</a>
+          </li>
+
+          <!--5주-->
+          <li>
+              <a href="#none" class="orange">25</a>
+          </li>
+          <li>
+              <a href="#none"> 26</a>
+          </li>
+          <li>
+              <a href="#none">27</a>
+          </li>
+          <li>
+              <a href="#none">28</a>
+          </li>
+          <li>
+              <a href="#none">29</a>
+          </li>
+          <li>
+              <a href="#none">30</a>
+          </li>
+          <li>
+              <a href="#none" class="opacity">0</a>
+          </li>
+         
+          
+        </ul>
+      
+      </div>
+
+
+        <div id="box2_1_2">
+          <h4>선택날짜</h4>
+          <h5>2022.12.20</h5>
+
+          <ul>
+            <li>
+              <h3>한국가곡반 - 매주 목요일</h3>
+              <h6>목요일 10:30-12:30</h6>
+              <h6>부산오페라하우스</h6>
+            </li>
+            <li>
+              <h3>외국가곡반 - 매주 화요일</h3>
+              <h6>화요일 10:30-12:30</h6>
+              <h6>부산오페라하우스</h6>
+            </li>
+          </ul>
+
+          <div id="box_mini">
+            <img src="images/three_left_mini.png" alt="화살표" id="mini">
+            <img src="images/three_right_mini.png" alt="화살표" id="mini">
+          </div>
+        </div>
+    
+
+
+      <div id="box2_2">
+        <h1>NOTICE</h1>
+        <h2>공지사항</h2>
+
+        <hr>
+
+        <table>
+          <tr>
+            <th>아카데미 수강 관련 설문조사</th>
+            <td>2022.12.20</td>
+          </tr>
+          <tr>
+            <th>아카데미 : 코로나-19 대응방안 지침 안내</th>
+            <td>2022.12.20</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- 푸터 -->
+  <div class="footer clear">
+    <div class="footer_inner">
+      <p class="f_1 opa50">
+        <a href="#none">개인정보처리방침</a>
+        <a href="#none">이메일무단수집거부</a>
+        <a href="#none">고객서비스현장</a>
+        <a href="#none">오시는길</a>
+        <a href="#none">원격지원</a>
+      </p>
+    </div>
+    <hr>
+    <div class="footer_inner">
+      <img src="images/footer_logo.png" alt="로고" class="f_logo left">
+      <p class="f_2 opa50">
+        재단법인 부산오페라하우스 부산광역시 중구 북항 (우)00000 <br>
+        대표자 : 홍길동 사업자등록번호 : 000-00-00000 <br>
+        통신판매업신고 : 부산중구-0000호
+      </p>
+      
+      <p class="f_3">
+        <a href="https://www.busanpa.com/kor/Main.do" target="_blank"><img src="images/footer-bpa.jpg" alt="부산항만공사"></a>
+        <a href="https://www.busan.go.kr/index" target="_blank"><img src="images/footer-busan.png" alt="부산광역시"></a>
+        <br>
+        전화예매 및 문의 : 051-000-0000
+      </p>
+  
+      <p class="clear opa50">COPYRIGHT(C) BUSAN OPERA HOUSE. ALL RIGHTS RESERVED</p>
+    </div>
+  </div>
+
+</body>
+
+</html>

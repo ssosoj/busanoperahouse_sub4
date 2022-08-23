@@ -1,0 +1,677 @@
+*{margin:0; padding:0;}
+a{color: #000; text-decoration: none;}
+ul{list-style: none;}
+
+@font-face {
+  font-family: 'SUIT';
+  font-weight: 100;
+  font-style: normal;
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Thin.eot');
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Thin.eot?#iefix') format('embedded-opentype'),
+      url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Thin.woff2') format('woff2'),
+      url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Thin.woff') format('woff'),
+      url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Thin.ttf') format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SUIT';
+  font-weight: 200;
+  font-style: normal;
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-ExtraLight.eot');
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-ExtraLight.eot?#iefix') format('embedded-opentype'),
+      url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-ExtraLight.woff2') format('woff2'),
+      url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-ExtraLight.woff') format('woff'),
+      url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-ExtraLight.ttf') format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SUIT';
+  font-weight: 300;
+  font-style: normal;
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Light.eot');
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Light.eot?#iefix') format('embedded-opentype'),
+      url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Light.woff2') format('woff2'),
+      url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Light.woff') format('woff'),
+      url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Light.ttf') format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SUIT';
+  font-weight: 400;
+  font-style: normal;
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Regular.eot');
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Regular.eot?#iefix') format('embedded-opentype'),
+      url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Regular.woff2') format('woff2'),
+      url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Regular.woff') format('woff'),
+      url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Regular.ttf') format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SUIT';
+  font-weight: 500;
+  font-style: normal;
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Medium.eot');
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Medium.eot?#iefix') format('embedded-opentype'),
+      url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Medium.woff2') format('woff2'),
+      url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Medium.woff') format('woff'),
+      url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Medium.ttf') format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SUIT';
+  font-weight: 600;
+  font-style: normal;
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-SemiBold.eot');
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-SemiBold.eot?#iefix') format('embedded-opentype'),
+      url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-SemiBold.woff2') format('woff2'),
+      url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-SemiBold.woff') format('woff'),
+      url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-SemiBold.ttf') format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SUIT';
+  font-weight: 700;
+  font-style: normal;
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Bold.eot');
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Bold.eot?#iefix') format('embedded-opentype'),
+      url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Bold.woff2') format('woff2'),
+      url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Bold.woff') format('woff'),
+      url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Bold.ttf') format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SUIT';
+  font-weight: 800;
+  font-style: normal;
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-ExtraBold.eot');
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-ExtraBold.eot?#iefix') format('embedded-opentype'),
+      url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-ExtraBold.woff2') format('woff2'),
+      url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-ExtraBold.woff') format('woff'),
+      url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-ExtraBold.ttf') format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SUIT';
+  font-weight: 900;
+  font-style: normal;
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Heavy.eot');
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Heavy.eot?#iefix') format('embedded-opentype'),
+      url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Heavy.woff2') format('woff2'),
+      url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Heavy.woff') format('woff'),
+      url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Heavy.ttf') format("truetype");
+  font-display: swap;
+}
+
+body{
+  font-family: 'SUIT';
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #000;
+}
+
+/* 메뉴 */
+#gnb{
+  width: 100%;
+  height: 125px;
+  background-color: #f1f2f2;
+}
+.gnb_inner{
+  width: 1320px;
+  margin: auto;
+}
+.gnb_inner li a{
+  font-size: 25px;
+  font-weight: 700;
+}
+.gnb1 li{
+  float: left;
+  margin-top: 55px;
+  padding-right: 40px;
+}
+.gnb2{
+  position: relative;
+}
+.gnb2 li{
+  float: left;
+  margin-top: 55px;
+  padding-left: 22px;
+}
+#sub_logo{
+  margin-top: 20px;
+  margin-left: 72px;
+}
+#small{
+  font-size: 20px;
+}
+
+/* 메뉴 검색 */
+.search-wrapper {
+  position: absolute;
+  /* transform: translate(-100%, 0); */
+  top: 45px;
+  right: -40px;
+}
+.search-wrapper .input-holder {    
+  width:50px;
+  height:50px;
+  overflow: hidden;
+
+  border-radius: 10px;
+  
+  position: relative;
+}
+.search-wrapper.active .input-holder {
+  width:500px;
+  background: #f1f2f2;
+}
+.search-wrapper .input-holder .search-input {
+  width:100%;
+  height: 40px;
+  padding:0px 70px 0 20px;
+
+  opacity: 0;
+
+  position: absolute;
+  top:0px;
+  left:0px;
+  
+  background: transparent;
+  box-sizing: border-box;
+
+  border: 0;
+  outline:none;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color:#42444e;
+}
+.search-wrapper.active .input-holder .search-input {
+  opacity: 1;
+  transform: translate(0, 10px);
+
+  border-bottom: 3px solid #42444e;
+}
+.search-wrapper .input-holder .search-icon {
+  width:50px;
+  height:50px;
+  border:none;
+  border-radius:6px;
+  background: #f1f2f200;
+  padding:0px;
+  outline:none;
+  position: relative;
+  z-index: 2;
+  float:right;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.search-wrapper .close {
+  position: absolute;
+  z-index: 1;
+  top:10px;
+  right:20px;
+  width:25px;
+  height:25px;
+
+  cursor: pointer;
+
+  display: none;
+}
+.search-wrapper.active .close {
+  right:-50px;
+  transform: rotate(45deg);
+  display: block;
+}
+.search-wrapper .close::before, .search-wrapper .close::after {
+  position:absolute;
+  content:'';
+  background: #f37021;
+  border-radius: 2px;
+}
+.search-wrapper .close::before {
+  width: 5px;
+  height: 25px;
+  left: 10px;
+  top: 0px;
+}
+.search-wrapper .close::after {
+  width: 25px;
+  height: 5px;
+  left: 0px;
+  top: 10px;
+}
+
+
+/* 상단 고정 */
+.scroll-fixed{
+  position: fixed;
+  top: 0px;
+
+  width: 100%;
+}
+.gnb_top{
+  width: 100%;
+  background-color: #42444e;
+
+  display: none;
+
+  z-index: 99;
+}
+.gnb_top_inner{
+  width: 1320px;
+  margin: 10px auto;
+}
+.gnb_top_inner li a{
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 48px;
+
+  color: #f1f2f2;
+}
+.gnb1_top li{
+  float: left;
+  padding-right: 50px;
+}
+.gnb2_top{
+  position: relative;
+}
+.gnb2_top li{
+  float: left;
+}
+.gnb2_top li:nth-child(2), .gnb2_top li:nth-child(3){
+  padding-left: 50px;
+}
+.gnb2_top li:nth-child(4), .gnb2_top li:nth-child(5), .gnb2_top li:nth-child(6){
+  padding-left: 22px;
+}
+#small_top{
+  font-size: 20px;
+}
+#logo_top{
+  margin-left: 120px;
+}
+.on{
+  display: block;
+}
+
+
+/* 상단고정 메뉴 검색 */
+.search-wrapper_top {
+  position: absolute;
+  top: -8px;
+  right: -40px;
+}
+.search-wrapper_top .input-holder_top {    
+  width:50px;
+  height:50px;
+  overflow: hidden;
+
+  border-radius: 10px;
+  
+  position: relative;
+}
+.search-wrapper_top.active .input-holder_top {
+  width:510px;
+  background: #42444e;
+}
+.search-wrapper_top .input-holder_top .search-input_top {
+  width:100%;
+  height: 40px;
+  padding:0px 70px 0 20px;
+
+  opacity: 0;
+
+  position: absolute;
+  top:0px;
+  left:0px;
+  
+  background: transparent;
+  box-sizing: border-box;
+
+  border: 0;
+  outline:none;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color:#f1f2f2;
+}
+.search-wrapper_top.active .input-holder_top .search-input_top {
+  opacity: 1;
+  transform: translate(0, 10px);
+
+  border-bottom: 3px solid #f1f2f2;
+
+}
+.search-wrapper_top .input-holder_top .search-icon_top {
+  width:50px;
+  height:50px;
+  border:none;
+  border-radius:6px;
+  background: #42444e00;
+  padding:0px;
+  outline:none;
+  position: relative;
+  z-index: 2;
+  float:right;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.search-wrapper_top .close_top {
+  position: absolute;
+  z-index: 1;
+  top:10px;
+  right:20px;
+  width:25px;
+  height:25px;
+
+  cursor: pointer;
+
+  display: none;
+}
+.search-wrapper_top.active .close_top {
+  right:-50px;
+  transform: rotate(45deg);
+  display: block;
+}
+.search-wrapper_top .close_top::before, .search-wrapper_top .close_top::after {
+  position:absolute;
+  content:'';
+  background: #f37021;
+  border-radius: 2px;
+}
+.search-wrapper_top .close_top::before {
+  width: 5px;
+  height: 25px;
+  left: 10px;
+  top: 0px;
+}
+.search-wrapper_top .close_top::after {
+  width: 25px;
+  height: 5px;
+  left: 0px;
+  top: 10px;
+}
+
+
+/* 배너 */
+#banner{
+  height: 375px;
+  background: url(images/three_banner.jpg) no-repeat center top;
+}
+#banner > h1{
+  font-size: 50px;
+  font-weight: 600;
+  text-align: center;
+
+  padding-top: 169px;
+  color: #f1f2f2;
+}
+
+
+/* 작은메뉴 */
+#nav{
+  height: 60px;
+  background-color: #42444e;
+}
+.nav_inner{
+  width: 1320px;
+  margin: auto;
+}
+.nav_inner ul li{
+  box-sizing: border-box;
+  float: left;
+  height: 60px;
+  border-right: 1px solid #f1f2f2;
+
+  color: #f1f2f2;
+}
+.nav_inner ul li:nth-child(1){
+  padding-top: 13px;
+}
+.nav_inner ul li:nth-child(2), .nav_inner ul li:nth-child(3){
+  padding-top: 18px;
+  width: 270px;
+}
+.nav_inner h2{
+  display: inline-block;
+  margin-left: 36px;
+
+  font-size: 22px;
+  font-weight: 600;
+}
+.nav_inner img{
+  margin-right: 26px;
+}
+
+
+/* 내용 */
+#box{
+  width: 1320px;
+  margin: 110px auto;
+}
+/* 왼쪽 */
+.box1{
+  width: 450px;
+  text-align: center;
+}
+#p_number{  margin: 30px 0 50px 0;}
+#p_number img, #p_number h6{  display: inline-block;}
+#p_number h6{
+  font-size: 23px;
+  font-weight: 600;
+  padding: 0 10px;
+}
+.box1 h1{
+  font-size: 35px;
+  font-weight: 700;
+  margin: 30px;
+}
+.box1 > p{
+  text-align: left;
+  word-spacing: 5px;
+  margin-left: 20px;
+}
+.box1 p{
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 30px;
+}
+.box1 ul li{
+  float: left;
+  width: 33.33%;
+  margin: 50px 0;
+}
+
+/* 오른쪽 */
+.box2{
+  width: 770px;
+  margin-top: 60px;
+
+  position: relative;
+}
+.box2 h1, .box2 h2{  display: inline-block;}
+.box2 h1{
+  font-size: 35px;
+  font-weight: 700;
+}
+.box2 h2{
+  font-size: 21px;
+  font-weight: 400;
+  margin-left: 20px;
+}
+#arrow_m{  margin-left: 460px;}
+.box2 hr{
+  margin: 10px 0;
+  height: 2px;
+  background-color: #42444e;
+}
+#box2_1{  
+  height: 500px;
+  margin-bottom: 100px;
+
+}
+
+/* 달력 */
+#calendar{
+	width:400px;
+	height:360px; 
+	margin-bottom: 50px;
+
+  position: absolute;
+  left: 0;
+  top: 50px;
+}
+#calendar > li{
+	float:left;
+	width:14.28%;
+	height:16.6%;
+}
+#calendar > li > a{
+	display:block;
+	padding:5px 10px 20px 10px;
+
+	text-align:center;
+}
+.orange{color: #f37021;  }
+
+#calendar > .on > a{
+	font-weight:700;
+  text-decoration: underline;
+}
+
+.opacity{color: #fff;}
+
+.top{
+  display:block;
+	padding:10px 10px;
+
+  border-bottom:2px solid #42444e;
+}
+
+/* 강의명 */
+#box2_1_2{
+  float: right;
+
+  width: 350px;
+  height: 340px;
+
+  padding-top: 10px;
+
+
+  position: absolute;
+  right: 0;
+  top: 50px;
+}
+#box2_1_2 h4{
+  display: inline-block;
+  padding: 0 15px;
+
+  font-size: 13px;
+  font-weight: 400;
+
+  border: 1px solid #42444e;
+  border-radius: 2em;
+  background-color: #42444e;
+
+  color: #f1f2f2;
+}
+#box2_1_2 h5{
+  display: inline;
+  padding-left: 10px;
+  font-size: 15px;
+  font-weight: 500;
+}
+#box2_1_2 h3{
+  font-size: 14px;
+  font-weight: 500;
+}
+#box2_1_2 h6{
+  font-size: 13px;
+  font-weight: 400;
+}
+#box2_1_2 ul{
+  margin-top: 15px;
+}
+#box2_1_2 ul li{
+  border: 1px solid #42444e;
+  padding: 30px 20px;
+}
+#box_mini{
+  position: absolute;
+  bottom: 4px;
+  right: 0;
+}
+#box_mini img{
+  display:block;
+}
+#mini{
+  float: left;
+
+  padding: 10px 15px;
+
+  border: 1px solid #42444e;
+}
+#box2_2 table{
+  width: 100%;
+
+  text-align: left;
+}
+#box2_2 th{
+  font-size: 20px;
+  font-weight: 400;
+  
+}
+#box2_2 td{
+  font-size: 15px;
+  font-weight: 400;
+}
+
+
+/* 푸터 */
+ .footer{
+  background-color: #42444e;
+  font-size: 13px;
+  font-weight: 400;
+  height: 310px;
+ }
+ .footer_inner{
+  width: 1320px;
+  margin: auto;
+ }
+ .opa50, .opa50>a {
+  color: #f1f2f2;
+  opacity: 50%;
+ }
+ .f_1{
+  word-spacing: 33px;
+  padding: 22px 0 22px 0;
+ }
+ .f_logo{
+  display: inline-block;
+  margin: 22px 36px 31px 0;
+ }
+.f_2{
+  margin-top: 20px;
+  line-height: 30px;
+  display: inline-block;
+} 
+.f_3 > a{
+  padding-left: 35px;
+}
+.f_3{
+  float: right;
+  text-align: right;
+  color: #f1f2f2;
+  padding-top: 20px;
+  line-height: 40px;
+}
+
+ .right{  float: right; }
+ .left{  float: left; }
+
+ .clear{ clear: both;}
+
+.center{  text-align: center;}
